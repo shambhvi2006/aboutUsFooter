@@ -11,6 +11,8 @@ body {
 }
 .carousel {
   display: flex; 
+  flex-direction: column; /* ensure that all divs are one below the other */
+  justify-content: space-between;/* adds space between the divs vertically */
   align-items: center; 
   white-space: nowrap; 
   overflow: hidden; 
@@ -27,13 +29,14 @@ body {
 .carousel-label {
   font-size: 16px;
   color: white; 
-  margin-left: 45%;
-  margin-bottom: 10%;
+  /* margin-left: 45%; not needed now as the div only contains the text it has already been put to center by align items center*/
+  margin-bottom: 3%;
   text-align: center;
-  position: relative;
+  /* position: relative; */
+  display: flex;
 }
 .carousel-slide {
-  
+  margin-bottom: 4%;/* puts space between bottom of screen and entire div of sliding images */
   display: flex;
   gap: 20px;
   animation: slide 30s linear infinite;
