@@ -20,10 +20,10 @@ body {
 }
 @keyframes slide{
   from{
-    transform: translateX(0);
+    transform: translateX(70%);
   }
   to{
-    transform: translateX(-100%);
+    transform: translateX(-70%);
   }
 }
 .carousel-label {
@@ -39,7 +39,8 @@ body {
   margin-bottom: 4%;/* puts space between bottom of screen and entire div of sliding images */
   display: flex;
   gap: 20px;
-  animation: slide 30s linear infinite;
+  animation: slide 25s linear infinite;
+  animation-delay: 0.05s;
 }
 .carousel-slide img {
  
@@ -50,6 +51,8 @@ body {
   overflow: hidden; 
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
   flex-shrink: 0; 
+  /* position: absolute; */
+  /* transition: transform 0.5s ease; */
 }
 .carousel:hover .carousel-slide{
   animation-play-state: paused;
